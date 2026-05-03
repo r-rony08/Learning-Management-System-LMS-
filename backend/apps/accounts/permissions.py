@@ -1,0 +1,22 @@
+from rest_framework.permissions import BasePermission
+
+
+class IsAdmin(BasePermission):
+    def has_permission(self, request, view):
+        return request.user.role == "admin"
+    
+class IsInstructor(BasePermission):
+    def has_permission(self, request, view):
+        return request.user.role == "instructor"
+    
+class IsStudent(BasePermission):
+    def has_permission(self, request, view):
+        return request.user.role == "student"
+    
+class IsAdminOrInstructor(BasePermission):
+    def has_permission(self, request, view):
+        return request.user.role in ["admin","instructor"]
+    
+class IsOwnerOrAdmin(BasePermission):
+    def has_object_permission(self,request,view,obj):
+        return (request.user.role == "admin" or obj.instructor == request.user)
