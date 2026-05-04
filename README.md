@@ -168,6 +168,8 @@ http://localhost:5173/
 * POST /api/auth/register/
 * POST /api/auth/login/
 * GET /api/auth/profile/
+* POST /api/auth/forgot-password/
+* POST /api/auth/reset-password/
 
 ### Courses
 
