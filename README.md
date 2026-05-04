@@ -77,7 +77,7 @@ The system supports role-based access:
 ### Clone repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/r-rony08/Learning-Management-System-LMS-
 ```
 
 ### Navigate to backend
@@ -187,12 +187,6 @@ http://localhost:5173/
 ---
 
 ## Screenshots
-
-Place screenshots inside:
-
-```text
-screenshots/
-```
 
 ### Login Page
 
